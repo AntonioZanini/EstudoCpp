@@ -1,0 +1,15 @@
+FIXED:
+O manipulador de fluxo fixed (linha 86) indica que os valores de ponto flutuante devem ser enviados para a saída no chamado
+formato de ponto fixo, em oposição à notação científica. A notação científica é uma maneira de exibir um número como um número
+de ponto flutuante entre os valores de 1 e 10, multiplicado por uma potência de 10. Por exemplo, o valor 3.100 seria exibido em notação
+científica como 3,1 × 10³. A notação científica é útil para exibir valores muito grandes ou muito pequenos. A formatação utilizando a
+notação científica é discutida ainda mais no Capítulo 15. A formatação de ponto fixo, por outro lado, é utilizada para forçar um número de
+ponto flutuante a exibir um número específico de dígitos. Especificar a formatação de ponto fixo também força a impressão de ponto
+de fração decimal e zeros finais, mesmo que o valor seja um número inteiro, como 88,00. Sem opção de formatação de ponto fixo, esse
+valor é impresso em C++ como 88 sem os zeros finais e sem o ponto de fração decimal. Quando os manipuladores de fluxo fixed e
+setprecision são utilizados em um programa, o valor impresso é arredondado para o número de posições decimais indicado pelo
+valor passado para setprecision (por exemplo, o valor 2 na linha 86), embora o valor na memória permaneça inalterado. Por exemplo,
+as saídas dos valores 87,946 e 67,543 são como 87,95 e 67,54, respectivamente. Observe que também é possível forçar um ponto de
+fração decimal a aparecer utilizando manipulador de fluxo showpoint. Se showpoint é especificado sem fixed, zeros finais não serão
+impressos. Como endl, os manipuladores de fluxo fixed e showpoint não são parametrizados e não requerem o arquivo de cabeçalho
+<iomanip>. Ambos podem ser encontrados no cabeçalho <iostream>
